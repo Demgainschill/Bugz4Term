@@ -5,8 +5,7 @@
 A bash tool that is "only" compatible with the terminator terminal which consists of the following features:
 1. Contains a .bugz4term.conf file in the CWD each line of the config representing a command to fire on each pane of a window.
 ## Working
-1. Each line of the config file allows for the firing of horizontal panes of the terminator window ( 2 on each window pane ).
-
+1. Fire 4 Horizontal terminator panes (2 in each tab) loaded with custom commands from .bugz4term.conf each line representing a custom command on the config to be loaded.
 ## Showcase
 The below video allows for the showcasing of the bugz4term in action.
 
