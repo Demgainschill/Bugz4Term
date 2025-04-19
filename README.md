@@ -1,0 +1,13 @@
+## Bugz4Term (Bugz4Terminator)
+## Description
+A bash tool that is "only" compatible with the terminator terminal which consists of the following features:
+1. Contains a .bugz4term.conf file in the CWD each line of the config representing a command to open on each pane of a window.
+## Working
+1. Each line of the config file allows for the opening of horizontal panes of the terminator window ( 2 on each window pane ).
+
+## Showcase
+The below video allows for the showcasing of the bugz4term in action.
+
+
+https://github.com/user-attachments/assets/7f397345-f359-4d19-8e12-f89f319cd8b6
+
