@@ -22,10 +22,10 @@ ${b} | |_) | |_| | (_| |/ /|__   _| ||  __/ |  | | | | | | ${reset}
 ${b} |_.__/ \__,_|\__, /___|  |_|  \__\___|_|  |_| |_| |_| ${reset}
 ${b}              |___/                                    ${reset}
 
-	${y}Usage${reset}: ${b}./bugz4term.sh${reset} ${y}-c${reset} .bugs4term.conf
+	${y}Usage${reset}: ${g}./bugz4term.sh${reset} ${y}-c${reset} .bugs4term.conf
 	     ${y}-c${reset} .bugs4term.conf :${r} Run from .bugs4term.conf config file ${reset}
 	     ${y}-h${reset}                 :${r} Help section ${reset}
-
+             ${y}-g${reset}                 :${r} Generate .bugs4term.conf config file ${reset}
 	Example:
 		Each line in the config file represents the commands to display on each tab of the terminator
 		${g}./bugz4term.sh${reset} ${y}-c${reset} .bugs4term.conf
@@ -65,7 +65,7 @@ while getopts ":c:hd:" OPTS; do
 				echo "Not a domain"
 				exit 1
 			fi
-			;;
+			;; 
 		c)
 			bugs4termConfigFile=".bugs4term.conf"
 			if [[ -f "$OPTARG" ]] && [[ "$OPTARG" =~ "$bugs4termConfigFile" ]] ; then
