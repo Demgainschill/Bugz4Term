@@ -2,26 +2,35 @@
 
 # This script allows for creating 4 terminator windows that are loaded with the user specified commands. The command will be defaulted to creating 4 terminator windows each loaded with user specified commands in each terminator window ready to be executed when time is a concern in bug bounty or any specific methodology since you are able to have custom commands loaded.
 
+b=$(tput setaf 4)
+r=$(tput setaf 1)
+g=$(tput setaf 10)
+y=$(tput setaf 3)
+reset=$(tput sgr0)
+c=$(tput setaf 14)
+o=$(tput setaf 208) 
+
+
 domain=""
 
 usage(){
 	cat <<EOF
-  _                     _  _   _                      
- | |__  _   _  __ _ ___| || | | |_ ___ _ __ _ __ ___  
- | '_ \| | | |/ _' |_  / || |_| __/ _ \ '__| '_ ' _ \ 
- | |_) | |_| | (_| |/ /|__   _| ||  __/ |  | | | | | |
- |_.__/ \__,_|\__, /___|  |_|  \__\___|_|  |_| |_| |_|
-              |___/                                   
+${b}  _                     _  _   _                       ${reset}
+${b} | |__  _   _  __ _ ___| || | | |_ ___ _ __ _ __ ___   ${reset}
+${b} | '_ \| | | |/ _' |_  / || |_| __/ _ \ '__| '_ ' _ \  ${reset}
+${b} | |_) | |_| | (_| |/ /|__   _| ||  __/ |  | | | | | | ${reset}
+${b} |_.__/ \__,_|\__, /___|  |_|  \__\___|_|  |_| |_| |_| ${reset}
+${b}              |___/                                    ${reset}
 
-	Usage: ./bugz4term.conf -c .bugs4term.conf
-	     -c .bugs4term.conf : Run from .bugs4term.conf config file
-	     -h                 : Help section
+	${y}Usage${reset}: ${b}./bugz4term.sh${reset} ${y}-c${reset} .bugs4term.conf
+	     ${y}-c${reset} .bugs4term.conf :${r} Run from .bugs4term.conf config file ${reset}
+	     ${y}-h${reset}                 :${r} Help section ${reset}
 
 	Example:
 		Each line in the config file represents the commands to display on each tab of the terminator
-		./bugz4term.conf -c .bugs4term.conf
-		First 2 lines/commands in tab 1 in each terminator horizontal pane
-		Second 2 lines/commands in tab 2 in each terminator horizontal pane
+		${g}./bugz4term.sh${reset} ${y}-c${reset} .bugs4term.conf
+		First ${b}2${reset} lines/commands in ${y}tab 1${reset} in each terminator ${b}horizontal pane${reset}
+		Second ${b}2${reset} lines/commands in ${y}tab 2${reset} in each terminator ${b}horizontal pane${reset}
 EOF
 }
 
