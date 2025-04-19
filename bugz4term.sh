@@ -6,9 +6,22 @@ domain=""
 
 usage(){
 	cat <<EOF
-	Usage: ./bugs4term.sh [-c|-h]
-		-c : Run from .bugs4term.conf cofig file
-		-h : Help section
+  _                     _  _   _                      
+ | |__  _   _  __ _ ___| || | | |_ ___ _ __ _ __ ___  
+ | '_ \| | | |/ _' |_  / || |_| __/ _ \ '__| '_ ' _ \ 
+ | |_) | |_| | (_| |/ /|__   _| ||  __/ |  | | | | | |
+ |_.__/ \__,_|\__, /___|  |_|  \__\___|_|  |_| |_| |_|
+              |___/                                   
+
+	Usage: ./bugz4term.conf -c .bugs4term.conf
+	     -c .bugs4term.conf : Run from .bugs4term.conf config file
+	     -h                 : Help section
+
+	Example:
+		Each line in the config file represents the commands to display on each tab of the terminator
+		./bugz4term.conf -c .bugs4term.conf
+		First 2 lines/commands in tab 1 in each terminator horizontal pane
+		Second 2 lines/commands in tab 2 in each terminator horizontal pane
 EOF
 }
 
