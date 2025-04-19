@@ -6,8 +6,8 @@ domain=""
 
 usage(){
 	cat <<EOF
-	Usage: ./bugs4term.sh [options]
-		-c : Run from bugs4term cofig file
+	Usage: ./bugs4term.sh [-c|-h]
+		-c : Run from .bugs4term.conf cofig file
 		-h : Help section
 EOF
 }
@@ -17,11 +17,13 @@ loadRunConfig(){
 	$(xdotool key "ctrl+shift+t")
 	$(xdotool type "$(sed -rn '1p' "$configFile")")
 	$(xdotool keydown ctrl keydown shift key Down keyup shift keyup ctrl)
+	sleep 0.5
 	$(xdotool type "$(sed -rn '2p' "$configFile")")
 	sleep 1
 	$(xdotool key "ctrl+shift+t")
 	$(xdotool type "$(sed -rn '3p' "$configFile")")
 	$(xdotool keydown ctrl keydown shift key Down keyup shift keyup ctrl)
+	sleep 0.5
 	$(xdotool type "$(sed -rn '4p' "$configFile")")
 }
 
